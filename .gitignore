@@ -1,0 +1,73 @@
+# GNU Emacs temporary files
+\#*
+.\#*
+*~
+# Vim temporary files
+.*.sw[po]
+
+.php_cs_cache
+.phpstan_cache
+.vagrant
+.vscode/*
+/downloads
+/Gruntfile.local.js
+/solr/vendor
+/themes/minktest
+/vendor
+ChangeLog
+/TAGS
+composer.phar
+env.bat
+env.sh
+import/solrmarc.log*
+lessphp_*.list
+module/VuFind/tests/.phpunit*
+node_modules
+package-lock.json
+public/swagger-ui
+tests/phpcs.cache.json
+themes/bootstrap5/scss/vendor/bootstrap
+local/DirLocations.ini
+local/config/vufind/*.ini
+local/config/vufind/*.json
+local/config/vufind/*.key
+local/config/vufind/*.yaml
+
+# Keep the existing content, and optionally add:
+
+# Deployment and environment specifics
+.env
+*.env
+.env.local
+.env.development
+.env.production
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Logs
+*.log
+logs/
+log/
+
+# Security and sensitive data
+*.pem
+*.key
+*.cert
+
+# Backup and sync tools
+.sync/
+.dropbox
+.dropbox.attr
+
+# Composer development lock file (optional, depends on your workflow)
+# composer.lock
