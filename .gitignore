@@ -72,3 +72,20 @@ log/
 # Composer development lock file (optional, depends on your workflow)
 # composer.lock
 *.mrc
+
+# Ignore Solr index files
+solr/vufind/biblio/index/_*.cfs
+
+# Ignore large output and MARC files
+*.out
+*.mrc
+
+# Ignore cache directories
+local/cache/
+incoming/marc/
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
