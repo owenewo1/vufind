@@ -71,3 +71,4 @@ log/
 
 # Composer development lock file (optional, depends on your workflow)
 # composer.lock
+*.mrc
