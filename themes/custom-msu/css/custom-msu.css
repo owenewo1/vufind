@@ -47,15 +47,16 @@ a:hover {
 .advanced-search-link {
     /* Your custom styles here */
     color: #aa0d3d;
+    border: 1px #aa0d3d solid;
     text-decoration: none !important;
-    font-weight: bold;
     margin-bottom: 2px;
 }
 
 .advanced-search-link:hover {
     text-decoration: none;
     border: 1px #aa0d3d solid;
-    color: #aa0d3d;
+    color: white;
+    background-color: #aa0d3d;
 }
 
 .searchForm .btn-primary {
@@ -107,7 +108,7 @@ li.language.dropdown .dropdown-toggle {
 }
 .reset-filters-btn:hover {
     color: white !important;
-    background-color: #666666;
+    background-color: #737373;
     text-decoration: none;
 }
 .filters-toggle {
