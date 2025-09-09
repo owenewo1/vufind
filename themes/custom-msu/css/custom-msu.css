@@ -103,15 +103,13 @@ li.language.dropdown .dropdown-toggle {
 }
 .reset-filters-btn {
     color: white;
-    border: 1px #aa0d3d solid;
     padding: 10px;
-    background-color: #aa0d3d;
-    font-weight: bold;
+    background-color: #333;
 }
 .reset-filters-btn:hover {
     color: white !important;
     border: 1px white solid;
-    background-color: #d4869e;
+    background-color: #e6e6e6;
     text-decoration: none;
 }
 .filters-toggle {
