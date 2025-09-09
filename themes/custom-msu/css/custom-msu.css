@@ -115,18 +115,18 @@ li.language.dropdown .dropdown-toggle {
     text-decoration: none;
 }
 .filters-toggle {
-    color: #aa0d3d;
+    color: #333;
     padding: 10px;
 }
 .filters-title {
-    color: #aa0d3d;
+    color: #333;
     margin-top: 15px;
 }
 .active-filters .filters {
     margin-top: 10px;
 }
 .title-value-pair {
-    color: #aa0d3d;
+    color: #333;
 }
 
 a.navbar-brand[class*="lang-"] {
