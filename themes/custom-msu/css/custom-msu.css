@@ -99,6 +99,7 @@ li.language.dropdown .dropdown-toggle {
     border: 1px #aa0d3d solid;
     padding: 10px;
     background-color: #aa0d3d;
+    font-weight: bold;
 }
 .reset-filters-btn:hover {
     color: white !important;
