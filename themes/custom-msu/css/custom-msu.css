@@ -14,6 +14,7 @@
     padding: 15px;
     border-radius: 8px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 /* Red buttons */
 .btn-primary {
@@ -114,18 +115,18 @@ li.language.dropdown .dropdown-toggle {
     text-decoration: none;
 }
 .filters-toggle {
-    color: white;
+    color: #aa0d3d;
     padding: 10px;
 }
 .filters-title {
-    color: white;
+    color: #aa0d3d;
     margin-top: 15px;
 }
 .active-filters .filters {
     margin-top: 10px;
 }
 .title-value-pair {
-    color: white;
+    color: #aa0d3d;
 }
 
 a.navbar-brand[class*="lang-"] {
