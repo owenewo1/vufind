@@ -33,3 +33,8 @@ uuid-runtime/oracular-updates 2.40.2-1ubuntu1.2 amd64 [upgradable from: 2.40.2-1
 - Package upgrade completed: Tue Sep  9 14:53:30 UTC 2025
 - Packages updated: 986 total packages
 - VuFind files: Changes detected (will commit after reboot)
+## Post-Reboot Verification Tue Sep  9 14:57:42 UTC 2025
+- System rebooted successfully:  14:57:42 up 3 min,  2 users,  load average: 0.00, 0.00, 0.00
+- New kernel active: 6.11.0-29-generic
+- Web server: ✓ Responding
+- VuFind application: ⚠ Check manually
