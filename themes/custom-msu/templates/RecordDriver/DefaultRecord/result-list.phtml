@@ -79,12 +79,14 @@
 
       <?php if (!$this->driver->isCollection()): ?>
         <?php if ($snippet = $this->driver->getHighlightedSnippet()): ?>
+    <div class="bg-light p-1 rounded">
           <?php if (!empty($snippet['caption'])): ?>
             <strong><?=$this->transEsc($snippet['caption']) ?>:</strong>
           <?php endif; ?>
           <?php if (!empty($snippet['snippet'])): ?>
             <?=$this->translate('highlight_snippet_html', ['%%snippet%%' => $this->highlight($snippet['snippet'])]) ?><br>
           <?php endif; ?>
+    </div>
         <?php endif; ?>
       <?php endif; ?>
 
