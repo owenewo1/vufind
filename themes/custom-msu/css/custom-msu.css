@@ -66,3 +66,61 @@ a:hover {
 .searchForm-query {
     padding-bottom: 5px;
 }
+
+/* OR if you want to style it instead of hiding */
+li.language.dropdown .dropdown-toggle {
+    color: white;
+}
+/* Style the mobile hamburger menu button */
+.navbar-toggle.navbar-toggler {
+    background-color: transparent;
+    border: 1px solid white !important;
+    color: white;
+}
+
+/* Style the hamburger icon (three bars) */
+.navbar-toggle.navbar-toggler .fa-bars {
+    color: white !important;
+}
+
+/* Hover effect */
+.navbar-toggle.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px white solid;
+}
+
+/* Focus state for accessibility */
+.navbar-toggle.navbar-toggler:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+.reset-filters-btn {
+    color: white;
+    border: 1px transparent solid;
+    padding: 10px;
+}
+.reset-filters-btn:hover {
+    color: white !important;
+    border: 1px white solid;
+}
+.filters-toggle {
+    color: white;
+    padding: 10px;
+}
+.filters-title {
+    color: white;
+    margin-top: 15px;
+}
+.active-filters .filters {
+    margin-top: 10px;
+}
+.title-value-pair {
+    color: white;
+}
+
+a.navbar-brand[class*="lang-"] {
+    text-decoration: none !important;
+}
+.navbar-brand[class*="lang-"]:hover {
+    text-decoration: underline !important;
+}
