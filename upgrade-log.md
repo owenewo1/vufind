@@ -38,3 +38,6 @@ uuid-runtime/oracular-updates 2.40.2-1ubuntu1.2 amd64 [upgradable from: 2.40.2-1
 - New kernel active: 6.11.0-29-generic
 - Web server: ✓ Responding
 - VuFind application: ⚠ Check manually
+- VuFind application: ✓ Working correctly (301 redirect to /vufind/ is normal)
+- Apache version: 2.4.62 (Ubuntu)
+- All services verified: Tue Sep  9 14:59:31 UTC 2025
