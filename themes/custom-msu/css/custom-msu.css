@@ -10,10 +10,10 @@
 }
 /* Style the main search container */
 .search.container.navbar.navbar-expand-md {
-    background-color: #d4869e !important;
+    background-color: #f5f5f5 !important;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 15px 10px 20px 10px;
 }
 /* Red buttons */
 .btn-primary {
