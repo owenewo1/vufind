@@ -37,3 +37,32 @@ a:hover {
 .btn, .form-control, .card, .badge, .alert, .dropdown-menu, .modal-content, .nav-pills .nav-link, .pagination .page-link {
     border-radius: 0 !important;
 }
+.advanced-search-link {
+    /* Your custom styles here */
+    color: white;
+    text-decoration: none !important;
+    font-weight: bold;
+    margin-bottom: 2px;
+
+}
+
+.advanced-search-link:hover {
+    text-decoration: none;
+    border: 1px white solid;
+    color: white;
+}
+
+.searchForm .btn-primary {
+    margin-top: 4px;
+}
+.searchForm .btn-primary:hover {
+    color: white;
+}
+/* Add spacing between search form elements */
+.searchForm-inputs {
+    gap: 10px; /* Adjust this value for more/less space */
+}
+/* Alternative: add padding inside the container */
+.searchForm-query {
+    padding-bottom: 5px;
+}
