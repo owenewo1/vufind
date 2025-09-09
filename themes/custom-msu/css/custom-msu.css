@@ -96,12 +96,15 @@ li.language.dropdown .dropdown-toggle {
 }
 .reset-filters-btn {
     color: white;
-    border: 1px transparent solid;
+    border: 1px #aa0d3d solid;
     padding: 10px;
+    background-color: #aa0d3d;
 }
 .reset-filters-btn:hover {
     color: white !important;
     border: 1px white solid;
+    background-color: #d4869e;
+    text-decoration: none;
 }
 .filters-toggle {
     color: white;
