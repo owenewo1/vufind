@@ -1,0 +1,26 @@
+/* Custom Bootstrap 5 Theme */
+/* Clean, modern styling using Bootstrap 5 variables and utilities */
+
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    /* Add your custom colors here */
+}
+
+/* Test indicator to show custom theme is working */
+body {
+    border-top: 3px solid var(--bs-primary);
+}
+
+.footer::after {
+    content: " [Custom Bootstrap 5 Theme Active]";
+    color: var(--bs-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Modern card styling */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
