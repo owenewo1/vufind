@@ -1,7 +1,7 @@
 .template-dir-search.template-name-home header, .template-dir-eds.template-name-home header, .template-dir-combined.template-name-home header {
   display:flex;
   flex-direction:column;
-  background-color:$msugreen;
+  background-color: #aa0d3d;
   background-image:
   linear-gradient(
     rgba(24, 69, 59, 0.8),
@@ -65,7 +65,7 @@
 
 header {
   .banner.container {
-    background-color:$msugreen;
+    background-color:#aa0d3d;
     background-image:
     linear-gradient(
       rgba(24, 69, 59, 0.8),
@@ -202,6 +202,7 @@ header {
         line-height:1em;
         width:1.5em !important;
         height:1.5em;
+        padding: 5px;
     }
       .search-tips-mobile {
         position:absolute;
