@@ -46,17 +46,16 @@ a:hover {
 }
 .advanced-search-link {
     /* Your custom styles here */
-    color: white;
+    color: #aa0d3d;
     text-decoration: none !important;
     font-weight: bold;
     margin-bottom: 2px;
-
 }
 
 .advanced-search-link:hover {
     text-decoration: none;
-    border: 1px white solid;
-    color: white;
+    border: 1px #aa0d3d solid;
+    color: #aa0d3d;
 }
 
 .searchForm .btn-primary {
