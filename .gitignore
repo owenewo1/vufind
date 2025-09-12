@@ -89,3 +89,9 @@ incoming/marc/
 Thumbs.db
 *.log
 *.tmp
+local/config/vufind/RecordDataFormatter.ini.backup
+local/config/vufind/SierraRest.ini
+local/cache/
+local/logs/
+vendor/
+solr/
