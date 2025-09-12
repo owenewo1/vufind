@@ -1,97 +1,22 @@
-# GNU Emacs temporary files
-\#*
-.\#*
-*~
-# Vim temporary files
-.*.sw[po]
-
-.php_cs_cache
-.phpstan_cache
-.vagrant
-.vscode/*
-/downloads
-/Gruntfile.local.js
-/solr/vendor
-/themes/minktest
-/vendor
-ChangeLog
-/TAGS
-composer.phar
-env.bat
-env.sh
-import/solrmarc.log*
-lessphp_*.list
-module/VuFind/tests/.phpunit*
-node_modules
-package-lock.json
-public/swagger-ui
-tests/phpcs.cache.json
-themes/bootstrap5/scss/vendor/bootstrap
-local/DirLocations.ini
-local/config/vufind/*.ini
-local/config/vufind/*.json
-local/config/vufind/*.key
-local/config/vufind/*.yaml
-
-# Keep the existing content, and optionally add:
-
-# Deployment and environment specifics
-.env
-*.env
-.env.local
-.env.development
-.env.production
-
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Backup files
-*.bak
-*.gho
-*.ori
-*.orig
-*.tmp
+# VuFind runtime and cache
+local/cache/
+local/cache/*
 
 # Logs
 *.log
 logs/
-log/
+var/log/
 
-# Security and sensitive data
-*.pem
-*.key
-*.cert
+# Large data and exports (keep repo small)
+incoming/
+incoming/**
 
-# Backup and sync tools
-.sync/
-.dropbox
-.dropbox.attr
-
-# Composer development lock file (optional, depends on your workflow)
-# composer.lock
+# MARC dumps (optional; comment out if you want to version them)
 *.mrc
+*.marc
+*marc*.xml
 
-# Ignore Solr index files
-solr/vufind/biblio/index/_*.cfs
-
-# Ignore large output and MARC files
-*.out
-*.mrc
-
-# Ignore cache directories
-local/cache/
-incoming/marc/
-
-# Ignore system and temporary files
+# OS/editor noise
 .DS_Store
 Thumbs.db
-*.log
-*.tmp
-local/config/vufind/RecordDataFormatter.ini.backup
-local/config/vufind/SierraRest.ini
-local/cache/
-local/logs/
-vendor/
-solr/
+*.swp

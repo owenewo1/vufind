@@ -1,0 +1,11 @@
+[Defaults]
+core[] = "MARC700"
+
+[Field_MARC700]
+label = "Added Entry (Personal Name)"
+renderType = "RecordDriverTemplate"
+template = "data-marc700.phtml"
+pos = 120
+
+[Description]
+MARC700 = "MARC700"

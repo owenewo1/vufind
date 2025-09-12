@@ -1,0 +1,27 @@
+[Defaults]
+; Only add our field to the standard core set
+core[] = "MARC700"
+
+[Field_MARC700]
+label = "Added Entry (Personal Name)"
+renderType = "RecordDriverTemplate"
+template = "data-marc700.phtml"
+pos = 120
+
+[Field_CANARY]
+label = "DEBUG Canary"
+renderType = "Inline"
+value = "Formatter active"
+pos = 6
+
+[Defaults]
+core[] = "CANARY"
+
+[Field_MARC245]
+label = "DEBUG Title 245"
+renderType = "RecordDriverTemplate"
+template = "data-marc245.phtml"
+pos = 7
+
+[Defaults]
+core[] = "MARC245"

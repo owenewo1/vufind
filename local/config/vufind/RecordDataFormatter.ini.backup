@@ -1,0 +1,34 @@
+[Defaults]
+core[] = "TestField"
+core[] = "AdditionalAuthors"
+core[] = "CorporateAuthors"
+core[] = "MARC240"
+core[] = "MARC245"
+
+[Field_TestField]
+dataMethod = "getTitle"
+pos = 50
+
+[Field_AdditionalAuthors]
+dataMethod = "getTitle"
+pos = 150
+renderType = "RecordDriverTemplate"
+template = "data-marc700.phtml"
+
+[Field_CorporateAuthors]
+dataMethod = "getTitle"
+pos = 160
+renderType = "RecordDriverTemplate"
+template = "data-marc710.phtml"
+
+[Field_MARC240]
+renderType = "RecordDriverTemplate"
+template = "data-marc240.phtml"
+label = "Uniform Title"
+pos = 170
+
+[Field_MARC245]
+renderType = "RecordDriverTemplate"
+template = "data-marc245.phtml"
+label = "Title Statement"
+pos = 180
