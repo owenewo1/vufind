@@ -263,7 +263,6 @@ ul.action-toolbar .toolbar-btn .icon {
 
 /* Active tab: keep crimson highlight (if VuFind uses 'active' class) */
 .record-tab.active .nav-link,
-.record-tab.initiallyActive .nav-link,
 .record-tab .nav-link.active {
   color: white !important;
   background-color: #333;
