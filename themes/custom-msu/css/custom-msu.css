@@ -147,11 +147,4 @@ a.navbar-brand[class*="lang-"] {
 .facet.js-facet-item.active:hover {
   background-color: #8C0B31 !important; /* darker crimson on hover */
 }
-.facet.js-facet-item.active {
-  display: inline-block;
-  background-color: #AA0D3D !important;
-  color: #fff !important;
-  border-radius: 12px;
-  padding: 3px 10px;
-  font-size: 0.9em;
-}
+
