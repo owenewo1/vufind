@@ -1,50 +1,157 @@
+
 <?php $account = $this->auth()->getManager(); ?>
-<header class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
-  <div class="container-fluid">
-    <!-- Branding / Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="<?=$this->url('home')?>">
-      <img src="https://library.msmnyc.edu/screens/header.png" alt="MSM Logo" height="40" class="me-2">
-      <span class="fw-bold text-white">MSM Library Search</span>
-    </a>
+<!-- MSM Library Header -->
+<div class="newheader-image-container" style="position: relative;">
+  <a href="https://library.msmnyc.edu">
+    <img src="https://library.msmnyc.edu/screens/header.png" alt="MSM Logo" class="newheader-image-1"/>
+  </a>
+  <a href="https://library.msmnyc.edu">
+    <span class="newheader-image-2">PETER JAY SHARP LIBRARY</span>
+  </a>
 
-    <!-- Mobile menu button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#msuNavbar"
-            aria-controls="msuNavbar" aria-expanded="false" aria-label="<?=$this->transEscAttr('Toggle navigation')?>">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div id="hoursLink">
+    <div id="libraryHours"></div>
+  </div>
+</div>
 
-    <!-- Nav + Search + User -->
-    <div class="collapse navbar-collapse" id="msuNavbar">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/About">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/Help">Help</a></li>
-      </ul>
+<nav class="newnavbar">
+  <div class="newmenu-container">
+    <div class="mobile-header" onclick="togglenewmenu()">
+      <div class="library-label">Library</div>
+      <div class="newhamburger">
+        <i class="bi bi-justify" id="menuIcon"></i>
+      </div>
+    </div>
 
-      <!-- Account / Login Links -->
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <?php if (is_object($account) && $account->loginEnabled()): ?>
-          <?php if ($account->getIdentity()): ?>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=$this->url('myresearch-home')?>"><?=$this->transEsc('Your Account')?></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=$this->url('myresearch-logout')?>"><?=$this->transEsc('Log Out')?></a>
-            </li>
-          <?php else: ?>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=$this->url('myresearch-userlogin')?>"><?=$this->transEsc('Login')?></a>
-            </li>
-          <?php endif; ?>
+    <div class="newnavbar-content">
+      <ul class="newmenu">
+        <li class="newdropdown">
+          <a href="#" onclick="togglenewdropdown(event)">About
+            <i class="bi bi-chevron-down newchevron"></i>
+          </a>
+          <div class="newdropdown-content">
+            <a href="https://libraryguides.msmnyc.edu/about">About the Library</a>
+            <a href="https://libraryguides.msmnyc.edu/staff">Ask the Staff</a>
+            <a href="https://library.msmnyc.edu/screens/hours.html">Library Hours</a>
+          </div>
+        </li>
+
+        <li class="newdropdown">
+          <a href="#" onclick="togglenewdropdown(event)">Resources
+            <i class="bi bi-chevron-down newchevron"></i>
+          </a>
+          <div class="newdropdown-content">
+            <a href="https://library.msmnyc.edu/search/Y">Catalog Search</a>
+            <a href="https://libraryguides.msmnyc.edu/az.php">Databases</a>
+            <a href="https://login.msmnyc.idm.oclc.org/login?url=https://1950.account.worldcat.org/account/route/wsill/workform">Interlibrary Loans</a>
+          </div>
+        </li>
+
+        <li class="newdropdown">
+          <a href="#" onclick="togglenewdropdown(event)">Your Account
+            <i class="bi bi-chevron-down newchevron"></i>
+          </a>
+          <div class="newdropdown-content">
+            <a href="<?=$this->url('myresearch-home')?>">View Your Library Account</a>
+            <a href="<?=$this->url('myresearch-logout')?>">Log Out</a>
+          </div>
+        </li>
+
+        <?php if ($this->layout()->searchbox !== false): ?>
+        <li class="searchbox-container">
+          <?=$this->layout()->searchbox ?>
+        </li>
         <?php endif; ?>
       </ul>
-
-      <!-- Search Box -->
-      <?php if ($this->layout()->searchbox !== false): ?>
-        <div class="d-flex ms-lg-3" role="search">
-          <?=$this->layout()->searchbox ?>
-        </div>
-      <?php endif; ?>
     </div>
   </div>
-</header>
+</nav>
+
+<script>
+function togglenewmenu() {
+  var menu = document.querySelector('.newmenu');
+  var icon = document.querySelector('#menuIcon');
+  menu.classList.toggle('open');
+  if (menu.classList.contains('open')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
+}
+
+document.querySelectorAll('.newdropdown').forEach(function(newdropdown) {
+  newdropdown.addEventListener('click', function(event) {
+    if (window.innerWidth <= 800) {
+      event.stopPropagation();
+      this.classList.toggle('open');
+    }
+  });
+});
+
+window.onclick = function(event) {
+  if (!event.target.matches('.newdropdown')) {
+    var dropdowns = document.getElementsByClassName("newdropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('open')) {
+        openDropdown.classList.remove('open');
+      }
+    }
+  }
+};
+
+// Library Hours fetcher
+let currentDate = new Date();
+async function fetchLibraryHours() {
+  const response = await fetch('https://msmnyc.libcal.com/widget/hours/grid?iid=6609&format=json&weeks=52&systemTime=0');
+  const data = await response.json();
+  displayHoursForDate(data, currentDate);
+}
+function displayHoursForDate(data, date) {
+  const dayOfWeek = date.toLocaleString('en-us', { weekday: 'long' });
+  const formattedDate = date.toISOString().split('T')[0];
+  let hoursForDate = null;
+  data.locations[0].weeks.forEach(week => {
+    if (week[dayOfWeek] && week[dayOfWeek].date === formattedDate) {
+      hoursForDate = week[dayOfWeek];
+    }
+  });
+
+  const hoursElement = document.getElementById('libraryHours');
+  const linkUrl = "https://library.msmnyc.edu/screens/hours.html";
+  if (hoursForDate) {
+    const statusClass = hoursForDate.times && hoursForDate.times.status === 'closed' ? 'closed' : 'open';
+    const formattedHours = hoursForDate.rendered.replace(/(\d+(?::\d+)?)\s*([ap]m)\s*-\s*(\d+(?::\d+)?)\s*([ap]m)/gi, '$1$2-$3$4');
+    hoursElement.innerHTML = `
+      <div class="${statusClass} hours-container">
+        <div class="date-container">
+          <span class="chevron" onclick="changeDate(-1)"><i class="bi bi-arrow-left-short"></i></span>
+          <p class="today-line-break">${date.toLocaleDateString('en-us', { weekday: 'short', month: 'short', day: 'numeric' })}</p>
+          <span class="chevron" onclick="changeDate(1)"><i class="bi bi-arrow-right-short"></i></span>
+        </div>
+        <a href="${linkUrl}" style="color:#333;text-decoration:none;">
+          <p>${formattedHours}</p>
+        </a>
+      </div>`;
+  } else {
+    hoursElement.innerHTML = `
+      <div class="closed hours-container">
+        <div class="date-container">
+          <span class="chevron" onclick="changeDate(-1)"><i class="bi bi-arrow-left-short"></i></span>
+          <p class="today-line-break">${date.toLocaleDateString('en-us', { weekday: 'short', month: 'short', day: 'numeric' })}</p>
+          <span class="chevron" onclick="changeDate(1)"><i class="bi bi-arrow-right-short"></i></span>
+        </div>
+        <a href="${linkUrl}" style="color:inherit;text-decoration:none;">
+          <p>Closed</p>
+        </a>
+      </div>`;
+  }
+}
+function changeDate(days) {
+  currentDate.setDate(currentDate.getDate() + days);
+  fetchLibraryHours();
+}
+fetchLibraryHours();
+</script>
