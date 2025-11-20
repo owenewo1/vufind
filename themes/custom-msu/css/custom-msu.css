@@ -243,3 +243,10 @@ a.navbar-brand[class*="lang-"] {
 ul.action-toolbar .toolbar-btn .icon {
   display: none !important;
 }
+/* --- Record Page Tabs Styling --- */
+
+/* Default link color: charcoal/dark grey */
+.record-tab .nav-link {
+  color: #333 !important;            /* dark grey text */
+  text-decoration: none !important;  /* no underline */
+}
