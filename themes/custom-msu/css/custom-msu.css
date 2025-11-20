@@ -132,3 +132,26 @@ a.navbar-brand[class*="lang-"] {
 .navbar-brand[class*="lang-"]:hover {
     text-decoration: underline !important;
 }
+.facet.js-facet-item.active {
+  background-color: #AA0D3D !important; /* your crimson */
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.facet.js-facet-item.active a,
+.facet.js-facet-item.active a .facet-value {
+  color: #fff !important; /* white text */
+  text-decoration: none;
+}
+
+.facet.js-facet-item.active:hover {
+  background-color: #8C0B31 !important; /* darker crimson on hover */
+}
+.facet.js-facet-item.active {
+  display: inline-block;
+  background-color: #AA0D3D !important;
+  color: #fff !important;
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 0.9em;
+}
