@@ -247,6 +247,6 @@ ul.action-toolbar .toolbar-btn .icon {
 
 /* Default link color: charcoal/dark grey */
 .record-tab .nav-link {
-  color: #333 !important;            /* dark grey text */
+  color: #333           /* dark grey text */
   text-decoration: none !important;  /* no underline */
 }
