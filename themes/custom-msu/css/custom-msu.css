@@ -254,7 +254,7 @@ ul.action-toolbar .toolbar-btn:focus {
 
 /* Dropdown menu consistency (for Export Record) */
 ul.action-toolbar .dropdown-menu {
-  border: 0px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 /* --- Record Page Tabs Styling --- */
