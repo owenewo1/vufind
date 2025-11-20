@@ -150,7 +150,6 @@ a.navbar-brand[class*="lang-"] {
 .top-facet-inner {
   display: inline-flex;
   align-items: center;
-  border-radius: 4px;
   margin: 2px 4px;
 }
 
@@ -160,8 +159,7 @@ a.navbar-brand[class*="lang-"] {
   align-items: center;
   padding: 4px 8px;        /* match applied size */
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #f5f5f5;
   color: #333;
   text-decoration: none;
   font-weight: 500;
@@ -193,6 +191,13 @@ a.navbar-brand[class*="lang-"] {
   font-size: 0.85em;
   background-color: #e0e0e0;
   color: #333;
-  border-radius: 10px;
   padding: 2px 6px;
+}
+
+/* Space the check‑mark icon nicely inside applied tags */
+.top-facet-inner a.applied .icon {
+  margin-left: 4px;   /* adds breathing room after the text */
+  font-size: 0.85em;  /* keeps icon slightly smaller than text */
+  line-height: 1;
+  color: #fff;        /* ensures icon stays white on crimson */
 }
