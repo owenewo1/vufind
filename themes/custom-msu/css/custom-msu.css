@@ -238,3 +238,8 @@ a.navbar-brand[class*="lang-"] {
   color: inherit;
   line-height: 1;
 }
+
+/* --- Remove icons from the action toolbar --- */
+ul.action-toolbar .toolbar-btn .icon {
+  display: none !important;
+}
