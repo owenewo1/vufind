@@ -14,24 +14,28 @@
   </div>
 </div>
 
-<nav class="navbar navbar-expand-lg" style="background-color:#AA0D3D;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#AA0D3D;">
   <div class="container-fluid px-4">
-    <!-- Brand / Logo text for small screens -->
-    <a class="navbar-brand text-white fw-bold d-lg-none" href="https://library.msmnyc.edu">
-      Library Menu
+
+    <!-- Left Logo / Brand (visible on all sizes) -->
+    <a class="navbar-brand d-flex align-items-center" href="https://library.msmnyc.edu">
+      <img src="https://library.msmnyc.edu/screens/header.png" alt="MSM Logo" height="40" class="me-2">
+      <span class="d-none d-md-inline text-white fw-semibold">Peter Jay Sharp Library</span>
     </a>
 
-    <!-- Hamburger -->
-    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#msmNav" aria-controls="msmNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="bi bi-list fs-2"></i>
+    <!-- Hamburger menu button -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#msmNav" aria-controls="msmNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu items -->
-    <div class="collapse navbar-collapse justify-content-center" id="msmNav">
-      <ul class="navbar-nav mb-2 mb-lg-0">
+    <!-- Collapsible navigation menu -->
+    <div class="collapse navbar-collapse" id="msmNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
+        <!-- About -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="menuAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
             About
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
@@ -42,20 +46,22 @@
           </ul>
         </li>
 
+        <!-- Resources -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="menuResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
             Resources
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="https://library.msmnyc.edu/search/Y">Catalog Search</a></li>
-            <li><a class="dropdown-item" href="https://libraryguides.msmnyc.edu/az.php">Databases</a></li>
+            <li><a class="dropdown-item" href="https://libraryguides.msmnyc.edu/az.php">Databases A–Z</a></li>
             <li><a class="dropdown-item" href="https://libraryguides.msmnyc.edu/coursereserves">Course Reserves</a></li>
             <li><a class="dropdown-item" href="https://login.msmnyc.idm.oclc.org/login?url=https://1950.account.worldcat.org/account/route/wsill/workform">Interlibrary Loans</a></li>
           </ul>
         </li>
 
+        <!-- Account -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="menuAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
             Your Account
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
@@ -66,6 +72,7 @@
 
       </ul>
     </div>
+
   </div>
 </nav>
 
