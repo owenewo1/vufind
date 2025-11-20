@@ -1,14 +1,117 @@
-/* Custom MSU theme adjustments */
-header.navbar {
-  background-color: #aa0d3d !important;
+
+/* === MSM Library Header Styling === */
+
+/* Global typography (optional) */
+body, header, .newnavbar {
+  font-family: "Noto Sans", sans-serif;
 }
 
-header.navbar .navbar-brand span,
-header.navbar .nav-link,
-header.navbar .navbar-toggler-icon {
-  color: #ffffff !important;
+/* Main header images + banner area */
+.newheader-image-container {
+  max-width: 1350px;
+  width: 100%;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
 }
 
-header.navbar .nav-link:hover {
-  color: #ffc107 !important; /* optional subtle gold hover color */
+.newheader-image-1 {
+  width: 250px;
+  height: auto;
+}
+
+.newheader-image-2 {
+  font-size: 20px;
+  color: #000;
+  margin-left: 30px;
+}
+
+#hoursLink {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+/* === Navbar === */
+.newnavbar {
+  display: flex;
+  justify-content: center;
+  background-color: #AA0D3D;
+  width: 100%;
+}
+.newnavbar-content {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1350px;
+  width: 100%;
+}
+.newmenu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.newdropdown {
+  position: relative;
+  background: #AA0D3D;
+}
+.newdropdown a {
+  color: #fff;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+.newdropdown:hover > a {
+  opacity: 0.8;
+}
+.newdropdown-content {
+  display: none;
+  position: absolute;
+  background: #AA0D3D;
+  min-width: 180px;
+  z-index: 1000;
+}
+.newdropdown:hover .newdropdown-content {
+  display: block;
+}
+
+/* === Responsive menu === */
+.newhamburger {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+}
+@media screen and (max-width: 767px) {
+  .newmenu {
+    flex-direction: column;
+    display: none;
+  }
+  .newmenu.open {
+    display: flex;
+  }
+  .newhamburger {
+    display: block;
+  }
+  .newdropdown-content {
+    position: static;
+    background: #AA0D3D;
+  }
+}
+
+/* === Hours widget styling === */
+.hours-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9em;
+}
+.hours-container p {
+  margin: 0;
+}
+.closed p {
+  color: #AA0D3D;
 }
