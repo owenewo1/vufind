@@ -145,4 +145,31 @@ a.navbar-brand[class*="lang-"] {
 .facet.js-facet-item.active:hover {
   background-color: #8C0B31 !important; /* darker crimson on hover */
 }
+/* --- Applied Filter Tag Styling --- */
+a.applied {
+  background-color: #AA0D3D !important;
+  color: #fff !important;
+  border: 1px solid #AA0D3D !important;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none !important;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
+/* Hover and focus states */
+a.applied:hover,
+a.applied:focus {
+  background-color: #8C0B31 !important; /* darker crimson */
+  border-color: #8C0B31 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Align the Font Awesome check mark neatly */
+a.applied .icon {
+  margin-left: 4px;
+  font-size: 0.9em;
+}
