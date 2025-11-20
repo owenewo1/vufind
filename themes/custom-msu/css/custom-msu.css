@@ -280,3 +280,27 @@ ul.action-toolbar .dropdown-menu {
   color: white !important;
   background-color: #333;
 }
+
+/* --- Footer Cleanup: Remove List Bullets --- */
+.footer-container ul {
+  list-style: none;    /* removes the bullets */
+  margin: 0;           /* remove default margins */
+  padding: 0;          /* remove indentation */
+}
+
+/* Optional: adjust list items for nicer spacing */
+.footer-container ul li {
+  margin: 0.25rem 0;
+}
+
+/* Optional: style links consistently */
+.footer-container ul li a {
+  color: #aa0d3d;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-container ul li a:hover,
+.footer-container ul li a:focus {
+  text-decoration: underline;
+}
