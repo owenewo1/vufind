@@ -1,0 +1,14 @@
+/* Custom MSU theme adjustments */
+header.navbar {
+  background-color: #aa0d3d !important;
+}
+
+header.navbar .navbar-brand span,
+header.navbar .nav-link,
+header.navbar .navbar-toggler-icon {
+  color: #ffffff !important;
+}
+
+header.navbar .nav-link:hover {
+  color: #ffc107 !important; /* optional subtle gold hover color */
+}
