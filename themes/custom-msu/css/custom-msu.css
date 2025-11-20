@@ -243,10 +243,26 @@ a.navbar-brand[class*="lang-"] {
 ul.action-toolbar .toolbar-btn .icon {
   display: none !important;
 }
+
 /* --- Record Page Tabs Styling --- */
 
 /* Default link color: charcoal/dark grey */
 .record-tab .nav-link {
-  color: #333           /* dark grey text */
+  color: #333 !important;            /* dark grey text */
   text-decoration: none !important;  /* no underline */
+  font-weight: 500;
+}
+
+/* Hover and focus: subtle crimson for interactive feedback */
+.record-tab .nav-link:hover,
+.record-tab .nav-link:focus {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Active tab: keep crimson highlight (if VuFind uses 'active' class) */
+.record-tab.active .nav-link,
+.record-tab.initiallyActive .nav-link,
+.record-tab .nav-link.active {
+  color: #white !important;
 }
