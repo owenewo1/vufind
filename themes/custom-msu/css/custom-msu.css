@@ -264,5 +264,5 @@ ul.action-toolbar .toolbar-btn .icon {
 .record-tab.active .nav-link,
 .record-tab.initiallyActive .nav-link,
 .record-tab .nav-link.active {
-  color: #white !important;
+  color: white !important;
 }
