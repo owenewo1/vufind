@@ -145,40 +145,54 @@ a.navbar-brand[class*="lang-"] {
 .facet.js-facet-item.active:hover {
   background-color: #8C0B31 !important; /* darker crimson on hover */
 }
-/* --- Applied Filter Tag Styling --- */
-a.applied {
-  background-color: #AA0D3D !important;
-  color: #fff !important;
-  border: 1px solid #AA0D3D !important;
-  border-radius: 4px;
-  text-decoration: none !important;
-}
 
-/* --- Applied Filter Tag Styling --- */
-a.applied {
-  background-color: #AA0D3D !important;
-  color: #fff !important;
-  border: 1px solid #AA0D3D !important;
-  border-radius: 4px;
-  padding: 4px 8px;
-  text-decoration: none !important;
-  font-weight: 500;
+/* --- Top Facet (Applied and Unapplied) Consistent Sizing --- */
+.top-facet-inner {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  border-radius: 4px;
+  margin: 2px 4px;
 }
 
-/* Hover and focus states */
-a.applied:hover,
-a.applied:focus {
-  background-color: #8C0B31 !important; /* darker crimson */
-  border-color: #8C0B31 !important;
+/* Unapplied (regular) facet buttons */
+.top-facet-inner a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;        /* match applied size */
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-facet-inner a:hover {
+  background-color: #eaeaea;
+  border-color: #999;
+  color: #222;
+}
+
+/* Applied (active) facet buttons */
+.top-facet-inner a.applied {
+  padding: 4px 8px;        /* same as unapplied */
+  background-color: #AA0D3D !important;
+  border: 1px solid #AA0D3D !important;
   color: #fff !important;
   text-decoration: none !important;
+  font-weight: 500;
 }
 
-/* Align the Font Awesome check mark neatly */
-a.applied .icon {
-  margin-left: 4px;
-  font-size: 0.9em;
+.top-facet-inner a.applied:hover {
+  background-color: #8C0B31 !important;
+  border-color: #8C0B31 !important;
+}
+
+.top-facet-inner .badge {
+  margin-left: 6px;
+  font-size: 0.85em;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 10px;
+  padding: 2px 6px;
 }
