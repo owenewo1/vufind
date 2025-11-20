@@ -244,6 +244,19 @@ ul.action-toolbar .toolbar-btn .icon {
   display: none !important;
 }
 
+/* --- Action Toolbar (no hover color change) --- */
+
+/* Hover and focus: keep the exact same color */
+ul.action-toolbar .toolbar-btn:hover,
+ul.action-toolbar .toolbar-btn:focus {
+  color: #333;
+}
+
+/* Dropdown menu consistency (for Export Record) */
+ul.action-toolbar .dropdown-menu {
+  border: 0px solid #ccc;
+}
+
 /* --- Record Page Tabs Styling --- */
 
 /* Default link color: charcoal/dark grey */
