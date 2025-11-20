@@ -130,6 +130,15 @@
    <field name="institution" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="collection" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="building" type="string" indexed="true" stored="true" multiValued="true"/>
+
+   <!-- MSMNYC: added local fields for building/location and control number -->
+   <field name="building_facet" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="institution_facet" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="bib_location_str" type="string" indexed="true" stored="true"/>
+   <field name="location_facet" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="item_location_str_mv" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="ctrlnum_str" type="string" indexed="true" stored="true"/>
+
    <!-- Generic Fields -->
    <field name="language" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="format" type="string" indexed="true" stored="true" multiValued="true"/>

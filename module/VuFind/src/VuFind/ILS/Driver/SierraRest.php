@@ -557,14 +557,20 @@ class SierraRest extends AbstractBase implements
      *
      * @return mixed     An array of getStatus() return values on success.
      */
+
     public function getStatuses($ids)
-    {
-        $items = [];
-        foreach ($ids as $id) {
-            $items[] = $this->getStatus($id);
-        }
-        return $items;
+{
+    // Normalize non-array input to an array
+    if (!is_array($ids)) {
+        $ids = [$ids];
     }
+
+    $items = [];
+    foreach ($ids as $id) {
+        $items[] = $this->getStatus($id);
+    }
+    return $items;
+}
 
     /**
      * Get Holding

@@ -481,8 +481,14 @@ class GetItemStatuses extends AbstractBase implements
     {
         $results = [];
         $this->disableSessionWrites();  // avoid session write timing bug
+
         $ids = $params->fromPost('id') ?? $params->fromQuery('id', []);
+        if (!is_array($ids)) {
+            $ids = [$ids];
+        }
+
         $searchId = $params->fromPost('sid') ?? $params->fromQuery('sid');
+
         try {
             $results = $this->ils->getStatuses($ids);
         } catch (ILSException $e) {
